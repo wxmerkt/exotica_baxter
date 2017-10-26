@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<ExoticaBaxterConfig>
+  <IKsolver Name="MySolver">
+    <MaxIt>100</MaxIt>
+    <MaxStep>0.1</MaxStep>
+    <Tolerance>1e-5</Tolerance>
+    <Alpha>1.0</Alpha>
+    <C>1e-3</C>
+  </IKsolver>
+
+  <UnconstrainedEndPoseProblem Name="IKProblem">
+    <PlanningScene>
+      <Scene Name="IKScene">
+        <JointGroup>right_arm</JointGroup>
+        <URDF>{baxter_description}/urdf/baxter.urdf</URDF>
+        <SRDF>{exotica_baxter}/config/baxter.srdf</SRDF>
+        <!-- <SRDF>{baxter_moveit_config}/config/baxter.srdf</SRDF> -->
+        <!-- <AlwaysUpdateCollisionScene>1</AlwaysUpdateCollisionScene> -->
+        <!-- <CollisionScene>CollisionSceneFCLLatest</CollisionScene> -->
+        <Debug>1</Debug>
+      </Scene>
+    </PlanningScene>
+    <Maps>
+      <EffFrame Name="HandPosition">
+        <Scene>MyScene</Scene>
+        <Type>RPY</Type>
+        <EndEffector>
+            <Frame Link="right_hand" LinkOffset="0 0 0 0 0 0 1"/>
+        </EndEffector>
+      </EffFrame>
+    </Maps>
+    <Rho>1</Rho>
+  </UnconstrainedEndPoseProblem>
+</ExoticaBaxterConfig>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <name>exotica_baxter</name>
+  <version>0.0.0</version>
+  <description>The exotica_baxter package</description>
+  <maintainer email="wolfgang.merkt@ed.ac.uk">Wolfgang Merkt</maintainer>
+  <license>BSD</license>
+  <url type="website">https://github.com/wxmerkt/exotica_baxter</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>baxter_description</run_depend>
+  <run_depend>exotica</run_depend>
+</package>
