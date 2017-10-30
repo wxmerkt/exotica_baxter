@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(exotica_baxter)
 
-find_package(catkin REQUIRED COMPONENTS
-  baxter_description
-  exotica
-)
+find_package(catkin REQUIRED)
 
 catkin_package(
  CATKIN_DEPENDS baxter_description exotica

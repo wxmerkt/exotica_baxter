@@ -11,24 +11,14 @@
   <UnconstrainedEndPoseProblem Name="IKProblem">
     <PlanningScene>
       <Scene Name="IKScene">
-        <JointGroup>right_arm</JointGroup>
-        <URDF>{baxter_description}/urdf/baxter.urdf</URDF>
+        <JointGroup>left_arm</JointGroup>
+        <!--<URDF>{baxter_description}/urdf/baxter.urdf</URDF>-->
+        <URDF>{exotica_baxter}/config/baxter_no_gazebo.urdf</URDF>
         <SRDF>{exotica_baxter}/config/baxter.srdf</SRDF>
-        <!-- <SRDF>{baxter_moveit_config}/config/baxter.srdf</SRDF> -->
         <!-- <AlwaysUpdateCollisionScene>1</AlwaysUpdateCollisionScene> -->
         <!-- <CollisionScene>CollisionSceneFCLLatest</CollisionScene> -->
-        <Debug>1</Debug>
+        <Debug>0</Debug>
       </Scene>
     </PlanningScene>
-    <Maps>
-      <EffFrame Name="HandPosition">
-        <Scene>MyScene</Scene>
-        <Type>RPY</Type>
-        <EndEffector>
-            <Frame Link="right_hand" LinkOffset="0 0 0 0 0 0 1"/>
-        </EndEffector>
-      </EffFrame>
-    </Maps>
-    <Rho>1</Rho>
   </UnconstrainedEndPoseProblem>
 </ExoticaBaxterConfig>
